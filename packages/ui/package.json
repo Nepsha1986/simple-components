@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./button": "./src/button.tsx",
     "./card": "./src/card.tsx",
     "./code": "./src/code.tsx",
-    "./dialog": "./src/Dialog/index.tsx"
+    "./dialog": "./src/Dialog/index.tsx",
+    "./button": "./src/Button/index.tsx",
+    "./styles": "./src/globals.scss"
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component"
+    "lint": "eslint . --max-warnings 0"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

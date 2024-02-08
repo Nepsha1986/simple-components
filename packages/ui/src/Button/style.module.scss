@@ -1,0 +1,68 @@
+.button {
+  font: var(--sc-primary-font);
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 3px;
+  transition: 0.3s opacity;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+
+  &_default {
+    color: var(--c-grey-dark);
+    background: var(--c-grey-lightest);
+  }
+
+  &_primary {
+    background: var(--sc-primary-color);
+  }
+
+  &_secondary {
+    background: var(--sc-secondary-color);
+  }
+
+  &_danger {
+    background: var(--c-danger);
+  }
+
+  &_transparent {
+    background: transparent;
+    color: var(--c-grey-dark);
+  }
+
+  &_disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &_sm {
+    padding: 3px 15px;
+    font-size: 0.65rem;
+  }
+
+  &_md {
+    padding: 5px 20px;
+    font-size: 0.75rem;
+  }
+
+  &_lg {
+    padding: 7px 25px;
+    font-size: 0.85rem;
+  }
+
+  &_iconOnly {
+    padding: 0.5rem;
+    line-height: 1;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+a.button {
+  &:hover {
+    color: #fff;
+  }
+}
