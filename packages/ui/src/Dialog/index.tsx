@@ -1,7 +1,9 @@
 import { type ReactNode, useEffect, useRef, FC } from "react";
 import classNames from "classnames";
 
-import styles from './styles.module.scss';
+// @ts-ignore
+import styles from "./styles.module.scss";
+import Button from "../Button";
 
 const Dialog: FC<{
   open: boolean;
@@ -30,7 +32,9 @@ const Dialog: FC<{
       <div className={styles.dialog__main}>{open && children}</div>
 
       <footer className={styles.dialog__footer}>
-        <button onClick={onClickClose}>Close</button>
+        <Button color="primary" onClick={onClickClose}>
+          Close
+        </Button>
       </footer>
     </dialog>
   );

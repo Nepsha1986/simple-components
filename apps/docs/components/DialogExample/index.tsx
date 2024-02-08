@@ -1,10 +1,12 @@
 "use client";
 
 import Dialog from "@repo/ui/dialog";
+import Button from "@repo/ui/button";
 import { useState } from "react";
 
 const DialogExample = () => {
   const [opened, setOpened] = useState(false);
+
   return (
     <div>
       <Dialog
@@ -16,13 +18,14 @@ const DialogExample = () => {
         Some stuff here
       </Dialog>
 
-      <button
+      <Button
+        color="primary"
         onClick={() => {
           setOpened(true);
         }}
       >
         Open
-      </button>
+      </Button>
     </div>
   );
 };
