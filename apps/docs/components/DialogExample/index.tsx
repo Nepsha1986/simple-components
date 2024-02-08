@@ -1,29 +1,30 @@
 "use client";
+
 import Dialog from "@repo/ui/dialog";
 import { useState } from "react";
 
-const InfoDialog = () => {
-  const [visible, setVisible] = useState(false);
-
+const DialogExample = () => {
+  const [opened, setOpened] = useState(false);
   return (
     <div>
       <Dialog
-        open={visible}
+        open={opened}
         onClickClose={() => {
-          setVisible(false);
+          setOpened(false);
         }}
       >
         Some stuff here
       </Dialog>
+
       <button
         onClick={() => {
-          setVisible(true);
+          setOpened(true);
         }}
       >
-        Click me
+        Open
       </button>
     </div>
   );
 };
 
-export default InfoDialog;
+export default DialogExample;
