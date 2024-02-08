@@ -1,9 +1,9 @@
-import React, { type ReactNode, useEffect, useRef } from "react";
+import { type ReactNode, useEffect, useRef, FC } from "react";
 import classNames from "classnames";
 
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss';
 
-const Dialog: React.FC<{
+const Dialog: FC<{
   open: boolean;
   children: ReactNode;
   onClickClose?: () => void;
@@ -22,10 +22,7 @@ const Dialog: React.FC<{
   });
 
   return (
-    <dialog
-      className={className}
-      ref={dialogRef}
-    >
+    <dialog className={className} ref={dialogRef}>
       <header className={styles.dialog__header}>
         {!!heading && <h3 style={{ marginBottom: 0 }}>{heading}</h3>}
       </header>

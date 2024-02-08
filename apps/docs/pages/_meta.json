@@ -1,0 +1,15 @@
+{
+  "index": "Introduction",
+  "quick-start": "Quick Start",
+  "components": "Components",
+  "about": {
+    "title": "About",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://twitter.com/shuding_",
+    "newWindow": true
+  }
+}
