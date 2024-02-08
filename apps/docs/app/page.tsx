@@ -3,6 +3,7 @@ import { Card } from "@repo/ui/card";
 import { Code } from "@repo/ui/code";
 import styles from "./page.module.css";
 import { Button } from "@repo/ui/button";
+import InfoDialog from "./_components/InfoDialog";
 
 function Gradient({
   conic,
@@ -77,6 +78,8 @@ export default function Page(): JSX.Element {
           </a>
         </div>
       </div>
+
+      <InfoDialog />
 
       <Button appName="docs" className={styles.button}>
         Click me!
