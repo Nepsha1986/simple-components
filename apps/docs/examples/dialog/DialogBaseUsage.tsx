@@ -1,14 +1,14 @@
 "use client";
-
+import { useState } from "react";
 import Dialog from "@repo/ui/dialog";
 import Button from "@repo/ui/button";
-import { useState } from "react";
+import DemoBox from "docs/components/DemoBox";
 
-const DialogExample = () => {
+const DialogBaseUsage = () => {
   const [opened, setOpened] = useState(false);
 
   return (
-    <div>
+    <DemoBox>
       <Dialog
         open={opened}
         onClickClose={() => {
@@ -26,8 +26,8 @@ const DialogExample = () => {
       >
         Open
       </Button>
-    </div>
+    </DemoBox>
   );
 };
 
-export default DialogExample;
+export default DialogBaseUsage;
