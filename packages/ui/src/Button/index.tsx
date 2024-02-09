@@ -1,3 +1,4 @@
+import { useState } from "react";
 import classNames from "classnames";
 
 // @ts-ignore
@@ -16,7 +17,6 @@ interface Props {
 }
 const Button: React.FC<Props> = ({
   children,
-  link,
   onClick,
   color = "default",
   iconOnly,
@@ -27,21 +27,28 @@ const Button: React.FC<Props> = ({
    */
   size = "lg",
   className = "",
-  target,
 }) => {
+  const [pressed, setPressed] = useState(false);
+
   const cssClassName = classNames(styles.button, className, {
     [styles.button_disabled]: disabled,
     [styles.button_iconOnly]: iconOnly,
-    [styles[`button_${color}`]]: color,
-    [styles[`button_${size}`]]: color,
+    [styles.button_pressed]: pressed,
+    [styles[`button_${color}`]]: !!color,
+    [styles[`button_${size}`]]: !!size,
   });
 
-  if (link)
-    return (
-      <a href={link} className={cssClassName} style={style} target={target}>
-        {children}
-      </a>
-    );
+  const handleMouseDown = () => {
+    setPressed(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (pressed) setPressed(false);
+  };
+
+  const handleMouseUp = () => {
+    setPressed(false);
+  };
 
   return (
     <button
@@ -50,6 +57,9 @@ const Button: React.FC<Props> = ({
       className={cssClassName}
       disabled={disabled}
       style={style}
+      onMouseDown={handleMouseDown}
+      onMouseLeave={handleMouseLeave}
+      onMouseUp={handleMouseUp}
     >
       {children}
     </button>

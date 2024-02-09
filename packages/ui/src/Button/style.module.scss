@@ -1,68 +1,72 @@
 .button {
-  font: var(--sc-primary-font);
-  display: inline-block;
-  text-transform: uppercase;
-  color: #fff;
-  border-radius: 3px;
-  transition: 0.3s opacity;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
+	@layer base, state;
 
-  &_default {
-    color: var(--sc-c-grey-dark, hsl(0, 0%, 10%));
-    background: var(--sc-c-grey-lightest, hsl(0, 0%, 90%));
-  }
+	@layer base {
+		font: var(--sc-primary-font);
+		display: inline-block;
+		text-transform: uppercase;
+		color: #fff;
+		border-radius: 3px;
+		font-weight: bold;
+		cursor: pointer;
+		border: none;
+		transition: 0.25s;
 
-  &_primary {
-    background: var(--sc-c-primary, hsl(216, 50%, 50%));
-  }
+		&:hover {
+			scale: 1.01;
+		}
+	}
 
-  &_secondary {
-    background: var(--sc-c-secondary, hsl(187, 50%, 50%));
-  }
+	@layer state {
+		&_default {
+			color: var(--sc-c-grey-dark, hsl(0, 0%, 10%));
+			background: var(--sc-c-grey-lightest, hsl(0, 0%, 90%));
+		}
 
-  &_danger {
-    background: var(--sc-c-danger, hsl(0, 50%, 50%));
-  }
+		&_primary {
+			background: var(--sc-c-primary, hsl(216, 50%, 50%));
+		}
 
-  &_transparent {
-    background: transparent;
-    color: var(--c-grey-dark);
-  }
+		&_secondary {
+			background: var(--sc-c-secondary, hsl(187, 50%, 50%));
+		}
 
-  &_disabled {
-    pointer-events: none;
-    opacity: 0.5;
-  }
+		&_danger {
+			background: var(--sc-c-danger, hsl(0, 50%, 50%));
+		}
 
-  &_sm {
-    padding: 3px 15px;
-    font-size: 0.65rem;
-  }
+		&_transparent {
+			background: transparent;
+			color: var(--sc-c-grey);
+		}
 
-  &_md {
-    padding: 5px 20px;
-    font-size: 0.75rem;
-  }
+		&_disabled {
+			pointer-events: none;
+			opacity: 0.5;
+		}
 
-  &_lg {
-    padding: 7px 25px;
-    font-size: 0.85rem;
-  }
+		&_sm {
+			padding: 3px 15px;
+			font-size: 0.65rem;
+		}
 
-  &_iconOnly {
-    padding: 0.5rem;
-    line-height: 1;
-  }
+		&_md {
+			padding: 5px 20px;
+			font-size: 0.75rem;
+		}
 
-  &:hover {
-    opacity: 0.8;
-  }
-}
+		&_lg {
+			padding: 7px 25px;
+			font-size: 0.85rem;
+		}
 
-a.button {
-  &:hover {
-    color: #fff;
-  }
+		&_iconOnly {
+			padding: 0.5rem;
+			line-height: 1;
+		}
+
+		&_pressed {
+			scale: 1.03;
+		}
+	}
 }
