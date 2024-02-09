@@ -10,20 +10,20 @@
   border: none;
 
   &_default {
-    color: var(--c-grey-dark);
-    background: var(--c-grey-lightest);
+    color: var(--sc-c-grey-dark, hsl(0, 0%, 10%));
+    background: var(--sc-c-grey-lightest, hsl(0, 0%, 90%));
   }
 
   &_primary {
-    background: var(--sc-primary-color);
+    background: var(--sc-c-primary, hsl(216, 50%, 50%));
   }
 
   &_secondary {
-    background: var(--sc-secondary-color);
+    background: var(--sc-c-secondary, hsl(187, 50%, 50%));
   }
 
   &_danger {
-    background: var(--c-danger);
+    background: var(--sc-c-danger, hsl(0, 50%, 50%));
   }
 
   &_transparent {

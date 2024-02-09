@@ -1,13 +1,19 @@
+import Dialog from "@repo/ui/dialog";
+import ComponentDocs from "docs/components/ComponentDocs";
+import { DialogBaseUsage } from "docs/examples/dialog";
+
 # Dialog
 
-## Dialog example
+Dialog component is a UI element that is commonly used to create modal or popup windows in a web application. Dialogs are used to overlay content on top of the existing page, providing a focused and often modal interaction with the user.
 
-import DialogExample from "../../components/DialogExample";
+## Base usage
 
-```js filename="demo.js" {3} copy
+<DialogBaseUsage />
+
+```js copy
 const [opened, setOpened] = useState(false);
 
-  return (
+return (
     <div>
       <Dialog
         open={opened}
@@ -27,8 +33,7 @@ const [opened, setOpened] = useState(false);
         Open
       </Button>
     </div>
-  )
+)
 ```
 
-
-<DialogExample />
+<ComponentDocs component={Dialog} />

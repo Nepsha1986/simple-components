@@ -1,0 +1,68 @@
+import Button from "@repo/ui/button";
+
+import ComponentDocs from "docs/components/ComponentDocs";
+import { ButtonBaseUsage, ButtonSize, ButtonColor } from "docs/examples/button";
+
+# Button
+
+Button component is used to create interactive and clickable elements within a user interface. Its primary functionality revolves around providing a standardized and reusable way to trigger actions or events when users interact with the application.
+
+## Import
+
+```js copy
+import Button from "@repo/ui/button";
+```
+
+## Base usage
+
+<ButtonBaseUsage />
+
+```js copy
+import Button from "@repo/ui/button";
+
+<Button onClick={handleClick}>
+  Open
+</Button>
+```
+
+## Button  sizes
+
+<ButtonSize />
+
+```js copy
+<>
+  <Button size='sm'>
+    Small
+  </Button>
+
+  <Button size='md'>
+    Medium
+  </Button>
+
+  <Button size='lg'>
+    Large
+  </Button>
+</>
+```
+
+## Button  colors
+
+<ButtonColor />
+
+```js copy
+<>
+  <Button size='sm'>
+    Small
+  </Button>
+
+  <Button size='md'>
+    Medium
+  </Button>
+
+  <Button size='lg'>
+    Large
+  </Button>
+</>
+```
+
+<ComponentDocs component={Button} />
