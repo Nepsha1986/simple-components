@@ -1,0 +1,12 @@
+@use '../defaults';
+
+.scrollProgress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 4px;
+	background: var(--sc-primary-color, defaults.$primary-color);
+	z-index: 10000;
+	transition: 0.1s width;
+}
